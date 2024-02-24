@@ -106,7 +106,10 @@ def main():
                     if mode == 'r1s1' or mode == 'r1s2' or mode == 'r2s1' or mode == 'r2s2' :
                         data = aio.receive(mode)
                         last_value = data.value
-                        aio.send_data(mode, ~int(last_value))
+                        if int(last_value) == 1 : 
+                            aio.send_data(mode, 0)
+                        else :
+                            aio.send_data(mode, 1)
                         mode = 'standby'
                         aio.send_data('mode', mode)
         # show the output window
