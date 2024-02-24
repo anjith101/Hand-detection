@@ -13,8 +13,8 @@ import time
 # import Adafruit IO REST client.
 from Adafruit_IO import Client, Feed, RequestError
 
-ADAFRUIT_IO_USERNAME = 'anjithZeus'
-ADAFRUIT_IO_KEY = 'aio_iAGr02190UJqagpH6SDzao9hIuQT'
+ADAFRUIT_IO_USERNAME = 'YOUR USER NAME'
+ADAFRUIT_IO_KEY = 'YOUR KEY'
 
 def main():
     global prev_hand_sign_id__array
